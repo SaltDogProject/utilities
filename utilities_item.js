@@ -747,8 +747,8 @@ var Utilities_Item = {
 
 		var fieldID, itemFieldID;
 		for(var field in item) {
-			if(field === "complete" || field === "itemID" || field === "attachments"
-				|| field === "seeAlso") continue;
+			// if(field === "complete" || field === "itemID" || field === "attachments"
+			// 	|| field === "seeAlso") continue;
 
 			var val = item[field];
 
