@@ -752,7 +752,7 @@ var Utilities_Item = {
 
 			var val = item[field];
 
-			if(field === "itemType") {
+			if(field === "itemType" || field === "seeAlso" || field === "attachments" ) {
 				newItem[field] = val;
 			} else if(field === "creators") {
 				// normalize creators
@@ -831,7 +831,7 @@ var Utilities_Item = {
 						note: note.toString()
 					});
 				}
-			} else if((fieldID = Zotero.ItemFields.getID(field))) {
+			}else if((fieldID = Zotero.ItemFields.getID(field))) {
 				// if content is not a string, either stringify it or delete it
 				if(typeof val !== "string") {
 					if(val || val === 0) {
